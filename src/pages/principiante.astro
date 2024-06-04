@@ -1,0 +1,43 @@
+---
+import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='Pruebas para principiantes'>
+  <div>
+    <header>
+      Nivel: <span class='text-gradient'>Principiante</span>
+    </header>
+    <ul role='list' class='link-card-grid'>
+      <Card
+        href='/encuentra-ditto'
+        title='Encuentra un Ditto'
+        body='TIenes que encontrar al Ditto que está transformado en un pokemon'
+      />
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  div {
+    header {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      color: white;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+  }
+</style>
