@@ -1,0 +1,46 @@
+---
+interface HeaderProps {
+  mainText: string;
+  strongText: string;
+}
+
+const { mainText, strongText } = Astro.props as HeaderProps;
+---
+
+<header>
+  {mainText}&nbsp<span class='text-gradient'>{`${strongText}`}</span>
+</header>
+
+<style>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  header {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>

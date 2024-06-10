@@ -1,0 +1,26 @@
+---
+import Header from '../components/Header.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <Header
+    mainText={frontmatter.headerText}
+    strongText={frontmatter.headerText}
+  />
+  <h1>{frontmatter.level}</h1>
+  <p>{frontmatter.description}</p>
+  <slot />
+
+  <style>
+    html {
+      font-family: system-ui, sans-serif;
+      background: #13151a;
+      background-size: 224px;
+      text-decoration: none;
+      line-height: 1.4;
+      color: white;
+    }
+  </style>
+</html>
