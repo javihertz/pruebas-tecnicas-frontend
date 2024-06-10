@@ -1,13 +1,12 @@
 ---
 import Card from '../components/Card.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title='Pruebas para principiantes'>
   <div>
-    <header>
-      Nivel: <span class='text-gradient'>Principiante</span>
-    </header>
+    <Header mainText='Nivel:' strongText='Principiante' />
     <ul role='list' class='link-card-grid'>
       <Card
         href='/principiante/encuentra-ditto'
