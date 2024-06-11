@@ -2,13 +2,11 @@
 import Header from '../components/Header.astro';
 
 const { frontmatter } = Astro.props;
+console.log('🧪 debug 🧪 frontmatter:', Astro.props);
 ---
 
 <html>
-  <Header
-    mainText={frontmatter.headerText}
-    strongText={frontmatter.headerText}
-  />
+  <Header mainText={frontmatter.mainText} strongText={frontmatter.strongText} />
   <h1>{frontmatter.level}</h1>
   <p>{frontmatter.description}</p>
   <slot />
